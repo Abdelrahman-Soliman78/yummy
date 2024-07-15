@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--------------------bootstrap connection------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!---------------- Google Font--------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">   
+
+
+    <!------------ fontAwesome Connection-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- ------- css connection ------------>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+  
+  
+
+<!-- ======================= start nav ==========================-->
+
+<!-- <nav class="navbar navbar-expand-lg bg-light position-fixed w-100 overflow-hidden">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Area</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ingredients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+<!-- ======================= end nav ==========================-->
+
+<aside class="sidebar">
+  <div class="close-btn">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="box-pages">
+    <ol class="my-5 ">
+      <li class="mt-3 search" onclick="getSearch() "  data-category="search">search</li>
+      <li class="mt-3 Categories" onclick="Category() " data-category="Categories">Categories</li>
+      <li class="mt-3 Area" onclick="Area()" data-category="Area">Area</li>
+      <li class="mt-3 ingredients" onclick="ingredient()" data-category="ingredients">ingredients</li>
+      <li class="mt-3 Contact" onclick="contactUs()" data-category="Contact">Contact us</li>
+    </ol>
+  </div>
+  <div class="footer-side ">
+    <div class="icons d-flex justify-content-center align-items-center">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter px-3"></i>
+      <i class="fa-solid fa-globe"></i>
+    </div>
+    <div class="text-side d-flex justify-content-center align-items-center">
+      <p class="p-2 text-center">Copyright Â© 2019 All Rights
+        Reserved.</p>
+    </div>
+  </div>
+</aside>
+
+<div class="icon-open d-none">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<!-- ======================= start section home ==========================-->
+
+<div class="home " id="home">
+    <div class="container py-5">
+        <div class="row" id="rowHome">
+         
+
+           
+        </div>
+    </div>
+</div>
+
+<!-- ======================= end section home ==========================-->
+<!-- ======================= start section Desc Meale ==========================-->
+
+<div class="desc  d-none overflow-hidden" id="desc">
+    <div class="container my-5">
+        <div class="row" id="rowDesc">
+          <div class="col-md-4">
+            <div class="desc-item">
+                <img class="w-100 rounded-4" src="img/58oia61564916529.jpg" alt="">
+                <h3 class="px-2">test</h3>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="text-desc">
+                <h2>Instructions</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat fugit numquam reiciendis fugiat natus alias.</p>
+                <p>Area : <span>Turkish</span></p>
+                <p>Category  : <span>Side</span></p>
+                <p>Recipes  : <br></p>
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- ======================= end section Desc Meale ==========================-->
+
+<!-- ======================= start section search ==========================-->
+
+<div class="search d-none">
+  <div class="container mt-1">
+    <div class="row" id="rowSearch">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Search By Name">
+      </div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Search By First Letter">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= end section search ==========================-->
+
+
+<!-- ======================= start section Categories ==========================-->
+
+<div class="category">
+  <div class="container">
+    <div class="row" id="rowCategory">
+      
+    </div>
+  </div>
+</div>
+
+<!-- ======================= end section Categories ==========================-->
+
+<!-- ======================= start section Area ==========================-->
+
+<div class="area">
+  <div class="container">
+    <div class="row" id="rowArea">
+      
+    </div>
+  </div>
+</div>
+
+<!-- ======================= end section Area ==========================-->
+
+<!-- ======================= start section ingredients ==========================-->
+
+<div class="ingredients" onclick="">
+  <div class="container">
+    <div class="row" id="rowIngredients">
+      
+    </div>
+  </div>
+</div>
+
+<!-- ======================= end section ingredients ==========================-->
+
+<!-- ======================= start section contact us ==========================-->
+
+<div class="contact d-none">
+  <div class="container mt-1">
+    <div class="row" id="rowContactUs">
+      
+        <div class="col-md-6 mb-3">
+          <input type="text" oninput="validationContactInput(this)" id="nameInput" class="form-control name" placeholder="Enter Your Name">
+        </div>
+        <div class="col-md-6">
+          <input type="text" oninput="validationContactInput(this)" id="emailInput" class="form-control emaile" placeholder="Enter Your Emaile" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" oninput="validationContactInput(this)" id="phoneInput" class="form-control phone" placeholder="Enter Your Phone" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" oninput="validationContactInput(this)" id="ageInput" class="form-control age" placeholder="Enter Your Age" required>
+        </div>
+        <div class="col-md-6">
+          <input type="text" oninput="validationContactInput(this)" id="passwordInput" class="form-control password" placeholder="Enter Your Password" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" oninput="validationContactInput(this)" id="repasswordInput" class="form-control repassword" placeholder="Repassword" required>
+        </div>
+        <div class="col-md-12 d-flex justify-content-center  ">
+          <button class="btn btn-danger text-center bg-black" type="submit" value="submit">Submite</button>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ======================= end section contact us ==========================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="parent d-flex justify-content-center align-items-center ">
+  <div class="loader "></div>
+</div>
+
+<!---------------------bootstrap coonection-------------------->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+<!-- ----------------- Connection JS --------------------- -->
+    <script src="js/main.js"></script>
+</body>
+</html>
